@@ -12,5 +12,10 @@ char** tokenize(char* input, int* ntokens){
     }
     tokens[pos] = NULL;
     *ntokens = pos;
+    printf("Tokens:\n");
+    for (int t = 0; t < ntokens; t++) {
+        printf("  [%d] %s\n", t, tokens[t]);
+    }
+
     return tokens;
 }

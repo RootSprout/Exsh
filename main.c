@@ -8,7 +8,7 @@ int main() {
     char line[1024];
 
     while (1) {
-        printf("$ ");
+        printf("Exsh$");
         if (!fgets(line, sizeof(line), stdin)) break;
 
         int ntokens;
@@ -17,8 +17,7 @@ int main() {
 
         Command *cmds = parse_tokens(tokens, ntokens);
         execute_commands(cmds);
-        free_commands(cmds);
-        free(tokens);
+        free_cmd(cmds);
     }
     return 0;
 }

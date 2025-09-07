@@ -33,8 +33,28 @@ void execute_commands(Command *cmd){
                 close(in);
             }
 
-            
+            if (curr->outfile) {
+                int flags = O_WRONLY | O_CREAT;
+                if (curr->append) flags |= O_APPEND;
+                else flags |= O_TRUNC;
+                int out = open(curr->outfile, flags, 0644);
+                dup2(out, 1);
+                close(out);
+            }
 
+            if (execvp(curr->argv[0], curr->argv) == -1) {
+                perror("exec failed");
+                exit(1);
+            }
+
+        }else {
+            wait(NULL);
+            if (fd_in != 0) close(fd_in);
+            if (curr->next) {
+                close(fd[1]);
+                fd_in = fd[0];
+            }
+            curr = curr->next;
         }
     }
 }

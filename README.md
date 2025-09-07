@@ -5,7 +5,7 @@
 ---
 
 
-Welcome to **Exsh**, an Unix like shell written in pure C. This project mimics the core behavior of Unix shells — covering command parsing, pipes, input/output redirection, process creation with `fork()`, and execution using `execvp()`.
+Welcome to **Exsh**, A Unix like shell written in pure C. This project mimics the core behavior of Unix shells — covering command parsing, pipes, input/output redirection, process creation with `fork()`, and execution using `execvp()`.
 
 🔬 Designed for learning, OS-level process management, and understanding how real shells like Bash work.
 
@@ -16,7 +16,7 @@ Welcome to **Exsh**, an Unix like shell written in pure C. This project mimics t
 |-------------------------------|-----------------------------------------------------|
 | Interactive Prompt            | `$` prompt for user input                           |
 | Command Execution             | Runs system commands with arguments                 |
-| Pipes (`|`)                   | Connects output of one command to input of another |
+| Pipes                   | Connects output of one command to input of another |
 | Input/Output Redirection (`>`, `>>`, `<`) | Redirects stdin/stdout to files           |
 | Built-in Commands             | `cd`, `exit`                                        |
 | Process Management            | `fork()`, `execvp()`, `wait()` for process control |

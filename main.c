@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lexer.h"
-#include "parser.h"
-#include "executor.h"
+#include "include/lexer.h"
+#include "include/parser.h"
+#include "include/executor.h"
 
 int main() {
     char line[1024];

@@ -1,8 +1,8 @@
-#include "parser.h"
-#include "executor.h"
+#include "../include/parser.h"
+#include "../include/executor.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "builtins.h"
+#include "../include/builtins.h"
 #include <unistd.h>
 #include <sys/wait.h>
 #include <fcntl.h>

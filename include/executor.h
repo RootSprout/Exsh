@@ -1,5 +1,5 @@
 #pragma once
 
-#include "parser.h"
+#include "../include/parser.h"
 
 void execute_commands(Command *cmd);

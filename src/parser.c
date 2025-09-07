@@ -1,6 +1,7 @@
-#include "parser.h"
+#include "../include/parser.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 
 Command *parse_tokens(char **tokens, int ntokens){
@@ -38,6 +39,7 @@ Command *parse_tokens(char **tokens, int ntokens){
 
         if(head == NULL){
             head = cmd;
+            curr = head;
         }else{
             curr->next = cmd;
             curr = cmd;
@@ -52,7 +54,7 @@ Command *parse_tokens(char **tokens, int ntokens){
 
 void free_cmd(Command *cmd){
     while(cmd){
-        Command *next = cmd;
+        Command *next = cmd->next;
         free(cmd->argv);
         free(cmd);
         cmd = next;

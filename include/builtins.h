@@ -1,5 +1,5 @@
 #pragma once
 
-#include "parser.h"
+#include "../include/parser.h"
 
 int handle_builtins(Command *cmd);

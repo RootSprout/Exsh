@@ -48,3 +48,14 @@ Command *parse_tokens(char **tokens, int ntokens){
 
     return head;
 }
+
+
+void free_cmd(Command *cmd){
+    while(cmd){
+        Command *next = cmd;
+        free(cmd->argv);
+        free(cmd);
+        cmd = next;
+    }
+}
+

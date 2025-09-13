@@ -14,7 +14,7 @@ Welcome to **Exsh**, A Unix like shell written in pure C. This project mimics th
 
 | Shell Feature                 | Exsh Implementation                                  |
 |-------------------------------|-----------------------------------------------------|
-| Interactive Prompt            | `$` prompt for user input                           |
+| Interactive Prompt            | Tracks command histroy, `<C-r>` search and cursor control |
 | Command Execution             | Runs system commands with arguments                 |
 | Pipes                   | Connects output of one command to input of another |
 | Input/Output Redirection (`>`, `>>`, `<`) | Redirects stdin/stdout to files           |

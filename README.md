@@ -23,6 +23,13 @@ Welcome to **Exsh**, A Unix like shell written in pure C. This project mimics th
 
 ## 🚀 Getting Started
 
+## Requirements
+   * libc
+   * gcc
+   * make
+   * libreadline (optional)
+   * Unix based OS
+
 ## 🔧 Build
 
 ```bash
@@ -60,6 +67,5 @@ To contribute:
    ```
 ## License
 @Meerthika
-
 
 

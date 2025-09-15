@@ -5,14 +5,20 @@ src/executor.c\
 src/lexer.c\
 src/parser.c
 
+USE_LIBREADLINE = -DUSE_LIBREADLINE -lreadline
+# comment above line to remove 'readline' dependency
 
-OUT = Exsh
+CFLAGS = -Wall -Wextra -fPIC $(USE_LIBREADLINE)
+
+OUTDIR = build
+OUT = $(OUTDIR)/Exsh
 
 $(OUT): $(SRC)
-	$(CC) $(SRC) -o $(OUT)
+	mkdir -p $(OUTDIR)
+	$(CC) $(SRC) $(CFLAGS) -o $(OUT)
 
 run:
 	./$(OUT)
 	
 clean:
-	rm -f $(OUT)
+	rm -rf build

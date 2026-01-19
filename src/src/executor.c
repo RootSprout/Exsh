@@ -23,6 +23,10 @@ void execute_commands(Command *cmd){
         }
 
         pid_t pid = fork();
+        if (pid < 0) {
+            perror("fork failed");
+            return;
+        }
         if (pid == 0){
             if (fd_in!=0) dup2(fd_in, 0);
             if (curr->next) dup2(fd[1],1);

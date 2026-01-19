@@ -43,8 +43,8 @@ void execute_commands(Command *cmd){
             }
 
             if (execvp(curr->argv[0], curr->argv) == -1) {
-                perror("exec failed");
-                exit(1);
+                fprintf(stderr, "exsh: command not found: %s\n", curr->argv[0]);
+                exit(127);
             }
 
         }else {
